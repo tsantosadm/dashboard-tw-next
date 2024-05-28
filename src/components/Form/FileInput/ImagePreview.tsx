@@ -22,7 +22,7 @@ export function ImagePreview() {
         )
     } else {
         return (
-            <img src={previewURL} alt="" className="h-16 w-16 rounded-full object-cover object-cover" />
+            <img src={previewURL} alt="" className="h-16 w-16 rounded-full object-cover" />
         )
     }    
 }
