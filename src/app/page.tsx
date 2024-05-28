@@ -62,16 +62,11 @@ export default function Home() {
               Your photo
               <span className='mt-0.5 block text-sm font-normal text-zinc-500'>This will be displayed on your profile</span>
             </label>
-
-
             <FileInput.Root className='flex item-start gap-5'>
               <FileInput.ImagePreview />
               <FileInput.Trigger />
               <FileInput.Control />
             </FileInput.Root>
-
-
-
           </div>
 
           <div className='grid grid-cols-form gap-3 pt-5'>
