@@ -12,7 +12,7 @@ export function ImagePreview() {
             return null
         }
         return URL.createObjectURL(files[0])
-    }, files)
+    }, [files])
 
     if (previewURL === null) {
         return (
