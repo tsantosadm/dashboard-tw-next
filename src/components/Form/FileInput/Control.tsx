@@ -2,7 +2,7 @@
 import { ChangeEvent, ComponentProps } from "react";
 import { useFileInput } from "./Root";
 
-export interface ControlProps extends ComponentProps<'input'> { }
+export type ControlProps = ComponentProps<'input'>
 
 export function Control(props: ControlProps) {
 
