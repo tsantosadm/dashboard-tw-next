@@ -18,7 +18,7 @@ export function Select({ children, placeholder, ...props }: SelectProps){
           </SelectPrimitive.Icon> 
         </SelectPrimitive.Trigger>
         <SelectPrimitive.Portal>
-            <SelectPrimitive.Content side='bottom' sideOffset={6} position='popper' className='z-10 shadow-sm rounded-lg border border-zinc-200 bg-white w-[--radix-select-trigger-width] overflow-hidden'>
+            <SelectPrimitive.Content side='bottom' sideOffset={6} position='popper' className='z-10 shadow-sm rounded-lg border border-zinc-200 bg-white w-[--radix-select-trigger-width] overflow-hidden animate-slideDownAndFade'>
                 <SelectPrimitive.Viewport>
                    {children}
                 </SelectPrimitive.Viewport>
