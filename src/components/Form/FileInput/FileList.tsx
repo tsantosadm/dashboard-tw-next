@@ -6,16 +6,16 @@ import { FileItem } from "./FileItem"
 
 
 export function FileList() {
-    const { files }= useFileInput()
+    const { files } = useFileInput()
     const [parent] = useAutoAnimate()
 
     return (
         <div className="mt-4 space-y-3" ref={parent}>
-           {files.map((file) => {
-            return (
-                <FileItem key={file.name} name={file.name} size={file.size} />
-            )
-        })}
+            {files.map((file) => {
+                return (
+                    <FileItem key={file.name} name={file.name} size={file.size} state="error" />
+                )
+            })}
         </div>
     )
 }
