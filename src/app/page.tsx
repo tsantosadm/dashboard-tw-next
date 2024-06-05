@@ -16,13 +16,15 @@ export default function Home() {
       <SettingsTabs />
 
       <div className='mt-6 flex flex-col'>
-        <div className='flex items-center justify-between pb-5 border-b border-zinc-200'>
+        <div className='flex flex-col lg:flex-row lg:items-center gap-4 items-center justify-between pb-5 border-b border-zinc-200'>
+
           <div className='space-y-1'>
             <h2 className='text-lg font-medium text-zinc-900'>Person info</h2>
             <span className='text-sm text-zinc-500'>
               Update your photo and personal details here
             </span>
           </div>
+
           <div className='flex items-center gap-2'>
             <Button variant='outline' type='button' form='settings'>
               Cancel
@@ -34,22 +36,29 @@ export default function Home() {
         </div>
 
         <form id='settings' className='mt-6 flex flex-col w-full gap-5 divide-y divide-zinc-200' >
-          <div className='grid grid-cols-form gap-3'>
+          <div className='lg:grid lg:grid-cols-form gap-3 flex flex-col'>
             <label htmlFor='firstName' className='text-sm font-medium text-zinc-700'>
               Name
             </label>
-            <div className='grid gap-6 grid-cols-2'>
+            <div className='lg:grid gap-6 lg:grid-cols-2 flex flex-col'>
               <Input.InputRoot>
                 <Input.InputControl id='firstName' defaultValue='Neo' />
               </Input.InputRoot>
 
-              <Input.InputRoot>
-                <Input.InputControl defaultValue='Tecnologia' />
-              </Input.InputRoot>
+              <div className='flex flex-col gap-3 lg:block'>
+                <label htmlFor='lastName' className='text-sm font-medium text-zinc-700 lg:sr-only'>
+                  Last name
+                </label>
+
+                <Input.InputRoot>
+                  <Input.InputControl id='lastName' defaultValue='Tecnologia' />
+                </Input.InputRoot>
+              </div>
+
             </div>
           </div>
 
-          <div className='grid grid-cols-form gap-3 pt-5'>
+          <div className='flex flex-col lg:grid lg:grid-cols-form gap-3 pt-5'>
             <label htmlFor='email' className='text-sm font-medium text-zinc-700'>
               Email address
             </label>
@@ -61,19 +70,19 @@ export default function Home() {
             </Input.InputRoot>
           </div>
 
-          <div className='grid grid-cols-form gap-3 pt-5'>
+          <div className='lg:grid lg:grid-cols-form gap-3 pt-5 flex flex-col'>
             <label htmlFor='photo' className='text-sm font-medium text-zinc-700'>
               Your photo
               <span className='mt-0.5 block text-sm font-normal text-zinc-500'>This will be displayed on your profile</span>
             </label>
-            <FileInput.Root className='flex item-start gap-5'>
+            <FileInput.Root className='flex flex-col lg:item-start gap-5 lg:flex-row'>
               <FileInput.ImagePreview />
               <FileInput.Trigger />
               <FileInput.Control />
             </FileInput.Root>
           </div>
 
-          <div className='grid grid-cols-form gap-3 pt-5'>
+          <div className='lg:grid lg:grid-cols-form gap-3 pt-5 flex flex-col'>
             <label htmlFor='role' className='text-sm font-medium text-zinc-700'>
               Role
             </label>
@@ -82,7 +91,7 @@ export default function Home() {
             </Input.InputRoot>
           </div>
 
-          <div className='grid grid-cols-form gap-3 pt-5'>
+          <div className='lg:grid lg:grid-cols-form gap-3 pt-5 flex flex-col'>
             <label htmlFor='country' className='text-sm font-medium text-zinc-500'>
               Country
             </label>
@@ -92,7 +101,7 @@ export default function Home() {
             </Select>
           </div>
 
-          <div className='grid grid-cols-form gap-3 pt-5'>
+          <div className='lg:grid lg:grid-cols-form gap-3 pt-5 flex flex-col'>
             <label htmlFor='timezone' className='text-sm font-medium text-zinc-500'>
               Timezone
             </label>
@@ -102,7 +111,7 @@ export default function Home() {
             </Select>
           </div>
 
-          <div className='grid grid-cols-form gap-3 pt-5'>
+          <div className='lg:grid lg:grid-cols-form gap-3 pt-5 flex flex-col'>
             <label htmlFor='bio' className='text-sm font-medium text-zinc-700'>
               Bio
               <span className='mt-0.5 block text-sm font-normal text-zinc-500'>
@@ -110,7 +119,7 @@ export default function Home() {
               </span>
             </label>
             <div className='space-y-3'>
-              <div className='grid gap-3 grid-cols-2'>
+              <div className='lg:grid gap-3 lg:grid-cols-2 flex flex-col'>
                 <Select placeholder='' defaultValue='normal'>
                   <SelectItem value='normal' text='Normal Text' />
                   <SelectItem value='md' text='Markdown' />
@@ -135,12 +144,12 @@ export default function Home() {
                 </div>
               </div>
               <TextArea id='bio'
-                defaultValue={'Engenheiro de Software LATAM experiente com 5 anos de experiência comprovada em impulsionar o crescimento da marca e melhorar as estratégias de desenvolvimento. Reconhecido por liderar equipes para execução eficiente de projetos, alcançando os melhores resultados. Proficiente em tecnologias diversas para otimização de projetos.'} 
+                defaultValue={'Engenheiro de Software LATAM experiente com 5 anos de experiência comprovada em impulsionar o crescimento da marca e melhorar as estratégias de desenvolvimento. Reconhecido por liderar equipes para execução eficiente de projetos, alcançando os melhores resultados. Proficiente em tecnologias diversas para otimização de projetos.'}
               />
             </div>
           </div>
 
-          <div className='grid grid-cols-form gap-3 pt-5'>
+          <div className='lg:grid lggrid-cols-form flex flex-col gap-3 pt-5'>
             <label htmlFor='projects' className='text-sm font-medium text-zinc-700'>
               Portfolio projects
               <span className='mt-0.5 block text-sm font-normal text-zinc-500'>
@@ -156,7 +165,7 @@ export default function Home() {
 
           <div className='flex items-center justify-end gap-2 pt-5'>
             <Button variant='outline' type='button' form='settings'>
-               Cancel
+              Cancel
             </Button>
             <Button variant='primary' type='button' form='settings' >
               Save
