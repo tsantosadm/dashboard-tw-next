@@ -11,10 +11,10 @@ const Profile = () => {
             />
 
             <div className="flex flex-col truncate">
-                <span className="text-sm font-semibold text-zinc-700">
+                <span className="text-sm font-semibold text-zinc-700 dark:text-zinc-100">
                     Talisson Santos
                 </span>
-                <span className="text-sm text-zinc-500 truncate">
+                <span className="text-sm text-zinc-500 truncate dark:text-zinc-400">
                     tsantodsasadm@neotecnologic.com
                 </span>
             </div>
